@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./reset2.css">
+    <!-- <script defer src="./main.js"></script> -->
+    <style>
+      * {
+        font-size: 12px;
+      }
+      body{
+        padding: 100px;
+      }
+
+      h2 {
+        margin: 10px 0;
+      }
+
+      .fav_lang {
+        width: 200px;
+        height: 40px;
+        background-color: #fff;
+        padding: 13px 14px;
+        font-size: 14px;
+      }
+
+      .fav_lang::after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 6px;
+        position: relative;
+        left: 28px;
+        bottom: 2px;
+        background-image: url('./images/Polygon_down.png');
+        background-size: contain;
+      }
+
+      .fav_lang.on::after {
+        transform: rotate(180deg);
+      }
+
+      .fav_lang:hover,
+      .fav_lang:focus {
+        border: 1px solid #9B51E0;
+        outline: 3px solid #F8E4FF;
+      }
+
+      .btn {
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 10px;
+        line-height: 15px;
+        text-align: left;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      /* img {
+        width: 9px;
+        height: 5.5px;
+        position: relative;
+        right: -45px;
+        bottom: -3px;
+      } */
+      .lang_lists {
+        display: none;
+        list-style: none;
+        width: 200px;
+        position: relative;
+        top: 9px;
+      }
+
+      .lang_lists li {
+        height: 40px;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 5px 8px;
+      }
+
+      .lang_lists li a {
+        display: block;
+        box-sizing: border-box;
+        height: 30px;
+        padding-left: 10px;
+        /* align-items: center; */
+        line-height: 27px;
+        border-radius: 8px;
+      }
+
+      .lang_lists li a:hover,
+      .lang_lists li a:focus {
+        background-color: #F8E4FF;
+      }
+
+      .fav_lang.on {
+        /* background: url(./images/Polygon_down.png) center right no-repeat; */
+      }
+
+      .fav_lang.on+.lang_lists {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>셀렉트 박스 만들기</h2>
+    <button class="fav_lang btn">최애 프로그래밍 언어</button>
+    <ul class="lang_lists btn">
+      <li><a href="">Python</a></li>
+      <li><a href="">Java</a></li>
+      <li><a href="">JavaScript</a></li>
+      <li><a href="">C#</a></li>
+      <li><a href="">C/C++</a></li>
+    </ul>
+    <script src="./main.js"></script>
+  </body>
+
+</html>
+<!-- 재현님의 꿀팁: container의 padding 값으로 그 
+안에 있는 요소들의 위치를 잡아줘라. -->
